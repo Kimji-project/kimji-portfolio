@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    background-color: white;
+    min-width: 1320px;
+}
+
+a {
+    color: #123341;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#content{
+    background: url(../images/bg.jpg) no-repeat fixed 0% 0%;
+    background-size: 3000px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 937px;
+}
+
+.c_inner{
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.c_inner img{
+    display: block;
+}
+
+/* 버튼이펙트 */
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+        flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: fixed;
+    top: 80%;
+    right: 5%;
+  /*   padding: 2em 0em; */
+
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding:  40px 0px;
+    width: 240px;
+    height: 100px;
+  }
+  
+  .btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 20px;
+
+
+  }
+  .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect04 {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    color: #000;
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden;
+  }
+  
+  .effect04::before,
+  .effect04 span{
+      margin: 0 auto;
+      transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      transition-duration: 0.4s;
+  }
+  
+  /* 文字1を上に */
+  .effect04:hover{
+  
+    background-color: #000;
+  }
+  
+  /* HOVERしたら文字1を上に */
+  .effect04:hover span{
+    -webkit-transform: translateY(-400%) scale(-0.1,20);
+            transform: translateY(-400%) scale(-0.1,20);
+  }
+  
+  /*文字2*/
+  .effect04::before{
+    content: attr(data-sm-link-text);
+      color: #eee;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1,20);
+            transform: translateY(500%) scale(-0.1,20);
+  }
+  
+  /* HOVERしたら文字2を上に */
+  .effect04:hover::before{
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1,1);
+            transform: translateY(0) scale(1,1);
+  }
+  
