@@ -732,13 +732,15 @@ a, a:hover {
   background-position: center center;
   background-repeat: repeat;
   width: 100%;
+  background-image: url(../images/cover_bg_1.jpg);
+  background-attachment: fixed;
 }
 
 .cover-v1.gradient-bottom-black {
   position: relative;
 }
 
-.cover-v1.gradient-bottom-black:before {
+/* .cover-v1.gradient-bottom-black:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -754,7 +756,7 @@ a, a:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(79%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.05)), to(black));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 79%, rgba(0, 0, 0, 0.05) 80%, black 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-}
+} */
 
 .cover-v1.overlay {
   position: relative;
@@ -2213,4 +2215,11 @@ span.error {
 
 .smaller{
   font-size: 14px;
+}
+
+@media (max-width:500px){
+  .cover-v1{
+    background-position: 50% center;
+    background-image: url(../images/cover_bg_1_mobile.jpg);
+  }
 }
